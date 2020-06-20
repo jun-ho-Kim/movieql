@@ -1,4 +1,5 @@
 type Horangee {
+    id: Int!,
     name: String!,
     age: Int,
     gender: String!
@@ -6,5 +7,6 @@ type Horangee {
 
 
 type Query {
-    person: Horangee!
+    people: [Horangee]!
+    person(hoNum: Int!): Horangee
 }
