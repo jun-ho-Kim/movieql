@@ -9,5 +9,7 @@ export const getMovies = (limit, rating) => {
     if(rating>0) {
         REQUEST_URL += `minimum_rating=${rating}`
     }
-    return fetch(REQUEST_URL).then(res => res.json()).then(json => json.data.movies);
+    return fetch(REQUEST_URL)
+    .then(res => res.json())
+    .then(json => json.data.movies);
 }
